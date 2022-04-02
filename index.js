@@ -43,6 +43,7 @@ function doTest(string, threads=1, computers=1, interval, time) {
     let et = new Date().getTime()/1000
     clearInterval(iint)
     console.log(`Test done. Time elapsed: ${et-st}`)
+    console.log(`Total gigabytes: ${sentMB/1000}, With a rate of ${(sentMB/1000)/time}`)
   }, time*1000)
 }
   
