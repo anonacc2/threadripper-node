@@ -31,5 +31,19 @@ function longString(msg, mb=10) {
   }
   return msg.repeat((mb*1000000)/msg.length)
 }
+
+let sentMB = 0;
+let mbps = 0;
+function doTest(string, threads=1, computers=1, interval, time) {
+  let st = new Date().getTime()/1000
+  let iint = setInterval(()=>{
+    sentMB += ((string.length/1000000)*threads)*computers
+  }, interval)
+  setTimeout(()=>{
+    let et = new Date().getTime()/1000
+    clearInterval(iint)
+    console.log(`Test done. Time elapsed: ${et-st}`)
+  }, time*1000)
+}
   
 
