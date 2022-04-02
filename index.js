@@ -44,12 +44,11 @@ function doTest(string, threads=1, computers=1, interval, time) {
     clearInterval(iint)
     console.log(`Test done. Time elapsed: ${et-st}`)
     if (sentMB < 1000) {
-      console.log(`Total gigabytes: ${sentMB/1000}GB  with a rate of ${(sentMB/1000)/time} gBps`)
+      console.log(`Total data: ${sentMB/1000}GB  with a rate of ${(sentMB/1000)/time} gBps`)
       console.log("gBps = Gigabytes per second")
-    }
     } else if (sentMB >= 1000) {
-      console.log(`Total gigabytes: ${(sentMB/1000)/1000}TB with a rate of ${((sentMB/1000)/1000)/time} tBps`)
-      console.log("tBps = Gigabytes per second")
+      console.log(`Total data: ${(sentMB/1000)/1000}TB with a rate of ${((sentMB/1000)/1000)/time} tBps`)
+      console.log("tBps = Terabytes per second")
     }
   }, time*1000)
 }
