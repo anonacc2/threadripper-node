@@ -21,7 +21,7 @@ function NDistDos(url, threads=2, interval) {
 function ult(url_, interval_) {
   setInterval(()=>{
     mk(url_)
-  }, interval_})
+  }, interval_)
 } 
 
 function longString(msg, mb=10) {
